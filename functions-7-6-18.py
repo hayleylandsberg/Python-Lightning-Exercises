@@ -8,8 +8,19 @@
 #    * One example output might then be "I have visited the city of San Francisco" if "San Francisco" was an item in the list, and the string argument was "I have visited the city of "
 # * Try it out! Execute the function both with and without passing in a value for the string parameter
 
-def test(list, number, foo="string"):
-    for item in list[:number]:
-        print(item)
+def print_cities(cities, num, str="I have visited the city of "):
+    for city in cities[:num]:
+        print(f'{str} {city}')
         return
-test(["hi", "bye", "sigh", "hello"], 2,)
+city_list = ["Corbin", "San Francisco", "Boston", "Austin"]
+
+print_cities(city_list, 5, "I have spent time in this place: ")
+print_cities(city_list, 1, "My Mother grew up in")
+
+
+letters = ['a', 'b','c','d','e','f','g','h','i','j','k','l']
+def adder(string,list, num=4):
+    for index, x in zip(range(num), list):
+        print(string, x)
+
+adder("I like the letter",letters, 5)
